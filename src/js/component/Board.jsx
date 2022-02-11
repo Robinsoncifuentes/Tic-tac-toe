@@ -6,10 +6,11 @@ export const Board = () => {
 	const winner = calculateWinner(square);
 	let status;
 	if (winner) {
-		status = "Winner :" + winner;
+		status = winner;
 	} else {
 		status = "Player turn :" + (X ? "X" : "O");
 	}
+
 	const renderSquare = (i) => {
 		return <Square value={square[i]} onClick={() => handleClick(i)} />;
 	};
@@ -45,9 +46,19 @@ export const Board = () => {
 		}
 		return null;
 	}
+	const handleRestart = () => {
+		winner == null;
+		setSquare(Array(9).fill(null));
+	};
 	return (
 		<div className="board">
-			{status}
+			<h1>Tic Tac Toe in React.js</h1>
+			{winner && (
+				<>
+					<p>{status} is the winner!</p>
+					<button onClick={() => handleRestart()}>Play Again</button>
+				</>
+			)}
 			<div className="board-row">
 				{renderSquare(0)}
 				{renderSquare(1)}
