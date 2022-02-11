@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 export const Form = (props) => {
 	return (
 		<form>
@@ -25,8 +26,14 @@ export const Form = (props) => {
 								/>
 							</label>
 							<div>
-								<button className="btn1 p-3">X</button>
-								<button className="btn1 p-3">O</button>
+								<button className="btn1 p-3">
+									<Link className="nav-link" to="/Board">
+										X
+									</Link>
+								</button>
+								<button className="btn1 p-3"><Link className="nav-link" to="/Board">
+										O
+									</Link></button>
 							</div>
 						</div>
 					</div>

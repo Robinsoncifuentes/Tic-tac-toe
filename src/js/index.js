@@ -4,9 +4,9 @@ import ReactDOM from "react-dom";
 
 // include your styles into the webpack bundle
 import "../styles/index.css";
-
+import "@popperjs/core";
 //import your own components
-import Home from "./component/home.jsx";
+import Layout from "./view/Layouts";
 
 //render your react application
-ReactDOM.render(<Home />, document.querySelector("#app"));
+ReactDOM.render(<Layout />, document.querySelector("#root"));

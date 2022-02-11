@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Square } from "./square.jsx";
+import { Link } from "react-router-dom";
+import { Square } from "./square.js";
 export const Board = () => {
 	const [square, setSquare] = useState(Array(9).fill(null));
 	const [X, setX] = useState(true);
@@ -56,7 +57,11 @@ export const Board = () => {
 			{winner && (
 				<>
 					<p>{status} is the winner!</p>
-					<button onClick={() => handleRestart()}>Play Again</button>
+					<span id="restart" onClick={() => handleRestart()}>
+						<Link className="nav-link" to="/">
+							Play Again!
+						</Link>
+					</span>
 				</>
 			)}
 			<div className="board-row">
