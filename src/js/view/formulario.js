@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export const Form = (props) => {
+export const Form = () => {
 	return (
 		<form>
 			<div className="container">
@@ -31,9 +31,11 @@ export const Form = (props) => {
 										X
 									</Link>
 								</button>
-								<button className="btn1 p-3"><Link className="nav-link" to="/Board">
+								<button className="btn1 p-3">
+									<Link className="nav-link" to="/Board">
 										O
-									</Link></button>
+									</Link>
+								</button>
 							</div>
 						</div>
 					</div>

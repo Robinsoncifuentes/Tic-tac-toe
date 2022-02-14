@@ -58,9 +58,7 @@ export const Board = () => {
 				<>
 					<p>{status} is the winner!</p>
 					<span id="restart" onClick={() => handleRestart()}>
-						<Link className="nav-link" to="/">
-							Play Again!
-						</Link>
+						Play Again!
 					</span>
 				</>
 			)}
